@@ -22,7 +22,8 @@
 
   <main class="gallery-main">
     <div class="gallery-grid">
-      
+
+```
   <!-- 
     To add images:
     1. Place your image files in the images/ folder
@@ -62,8 +63,56 @@
   </figure> -->
 
 </div>
+```
 
   </main>
+
+  <!-- Lightbox -->
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <button class="lightbox-prev" id="lightbox-prev">‹</button>
+    <button class="lightbox-next" id="lightbox-next">›</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    const items = Array.from(document.querySelectorAll('.gallery-item img'));
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    let current = 0;
+
+    function open(index) {
+      current = index;
+      lbImg.src = items[current].src;
+      lbImg.alt = items[current].alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function prev() { open((current - 1 + items.length) % items.length); }
+    function next() { open((current + 1) % items.length); }
+
+    items.forEach((img, i) => {
+      img.parentElement.addEventListener('click', () => open(i));
+    });
+
+    document.getElementById('lightbox-close').addEventListener('click', close);
+    document.getElementById('lightbox-prev').addEventListener('click', prev);
+    document.getElementById('lightbox-next').addEventListener('click', next);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    });
+  </script>
 
   <footer class="site-footer">
     <span>© <script>document.write(new Date().getFullYear())</script> Hawk Bryant</span>
