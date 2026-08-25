@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "photos": [
     {
-      "id": "bridge-moment",
-      "src": "images/BridgeMoment.jpg",
-      "alt": "Covered bridge with silhouette",
-      "title": "Untitled",
-      "year": 2024,
+      "id": "arrow-choo",
+      "src": "images/ArrowChoo.jpg",
+      "alt": "Small weathered locomotive and freight trailer beside a rural road",
+      "title": null,
+      "year": null,
       "location": null,
       "medium": null,
       "camera": null,
@@ -16,11 +16,11 @@
       "order": 10
     },
     {
-      "id": "strawberry-festival",
-      "src": "images/Strawberry festival.jpg",
-      "alt": "",
-      "title": null,
-      "year": null,
+      "id": "future-when",
+      "src": "images/FutureWhen.jpg",
+      "alt": "Weathered sign announcing the future home of the Florette Volunteer Fire Department",
+      "title": "Untitled",
+      "year": 2024,
       "location": null,
       "medium": null,
       "camera": null,
@@ -30,9 +30,9 @@
       "order": 20
     },
     {
-      "id": "dream-tree",
-      "src": "images/DreamTree.jpg",
-      "alt": "Two figures by the water",
+      "id": "phone-booth",
+      "src": "images/Phonebooth.jpg",
+      "alt": "Empty BellSouth phone booth standing against a weathered white building",
       "title": "Untitled",
       "year": 2024,
       "location": null,
@@ -44,11 +44,11 @@
       "order": 30
     },
     {
-      "id": "charlie",
-      "src": "images/Charlie.jpg",
-      "alt": "Sometimes we call him dog",
-      "title": null,
-      "year": null,
+      "id": "broken-swing",
+      "src": "images/BrokenSwing.jpg",
+      "alt": "Broken metal swing set surrounding a large tree in an empty park",
+      "title": "Untitled",
+      "year": 2024,
       "location": null,
       "medium": null,
       "camera": null,
@@ -58,9 +58,9 @@
       "order": 40
     },
     {
-      "id": "church-steeple",
-      "src": "images/churchSteeple.jpg",
-      "alt": "Church steeple in fog",
+      "id": "bridge-moment",
+      "src": "images/BridgeMoment.jpg",
+      "alt": "Two people walking through a covered wooden bridge striped with sunlight",
       "title": "Untitled",
       "year": 2024,
       "location": null,
@@ -72,9 +72,9 @@
       "order": 50
     },
     {
-      "id": "broken-swing",
-      "src": "images/BrokenSwing.jpg",
-      "alt": "Broken swing set",
+      "id": "janet",
+      "src": "images/Janet.jpg",
+      "alt": "Sparsely feathered chicken standing in grass against a dark background",
       "title": "Untitled",
       "year": 2024,
       "location": null,
@@ -86,9 +86,9 @@
       "order": 60
     },
     {
-      "id": "phone-booth",
-      "src": "images/Phonebooth.jpg",
-      "alt": "Abandoned phone booth",
+      "id": "horseshoe-tree",
+      "src": "images/HorseshoeTree.jpg",
+      "alt": "Rusty horseshoe and wood embedded in the trunk of a tree",
       "title": "Untitled",
       "year": 2024,
       "location": null,
@@ -102,7 +102,7 @@
     {
       "id": "old-bug",
       "src": "images/OlBug.jpg",
-      "alt": "",
+      "alt": "Rear of a weathered Volkswagen Beetle parked among trees and debris",
       "title": null,
       "year": null,
       "location": null,
@@ -114,11 +114,11 @@
       "order": 80
     },
     {
-      "id": "wanna-watch",
-      "src": "images/WannaWatch.jpg",
-      "alt": "Television under carport",
-      "title": "Untitled",
-      "year": 2024,
+      "id": "sad-cat",
+      "src": "images/Sadcat.jpg",
+      "alt": "Abandoned Bobcat skid-steer overgrown in a rural field",
+      "title": null,
+      "year": null,
       "location": null,
       "medium": null,
       "camera": null,
@@ -128,9 +128,9 @@
       "order": 90
     },
     {
-      "id": "headless-statue",
-      "src": "images/HeadlessStatue.jpg",
-      "alt": "Headless garden statue",
+      "id": "wanna-watch",
+      "src": "images/WannaWatch.jpg",
+      "alt": "Old television sitting on a worktable beneath a rural carport",
       "title": "Untitled",
       "year": 2024,
       "location": null,
@@ -142,9 +142,9 @@
       "order": 100
     },
     {
-      "id": "doll-spa",
-      "src": "images/DollSpa.jpg",
-      "alt": "Doll in water bin",
+      "id": "tin-nap",
+      "src": "images/TinNap.jpg",
+      "alt": "Handmade tin-can robot lying among tools and scrap metal",
       "title": "Untitled",
       "year": 2024,
       "location": null,
@@ -156,9 +156,9 @@
       "order": 110
     },
     {
-      "id": "janet",
-      "src": "images/Janet.jpg",
-      "alt": "Special lady",
+      "id": "doll-spa",
+      "src": "images/DollSpa.jpg",
+      "alt": "Doll head partially submerged in a plastic bin of rainwater and toys",
       "title": "Untitled",
       "year": 2024,
       "location": null,
@@ -170,9 +170,9 @@
       "order": 120
     },
     {
-      "id": "tin-nap",
-      "src": "images/TinNap.jpg",
-      "alt": "Tin can robot",
+      "id": "headless-statue",
+      "src": "images/HeadlessStatue.jpg",
+      "alt": "Headless garden statue of a child riding a bicycle among weeds",
       "title": "Untitled",
       "year": 2024,
       "location": null,
@@ -184,9 +184,9 @@
       "order": 130
     },
     {
-      "id": "horseshoe-tree",
-      "src": "images/HorseshoeTree.jpg",
-      "alt": "Horseshoe absorbed into tree",
+      "id": "pumpkins",
+      "src": "images/Pumpkins.jpg",
+      "alt": "Pile of decaying pumpkins on the ground beneath bare trees",
       "title": "Untitled",
       "year": 2024,
       "location": null,
@@ -198,9 +198,9 @@
       "order": 140
     },
     {
-      "id": "future-when",
-      "src": "images/FutureWhen.jpg",
-      "alt": "Future home of Florette Volunteer Fire Department",
+      "id": "church-steeple",
+      "src": "images/churchSteeple.jpg",
+      "alt": "Bright church steeple and cross rising through mist against a dark sky",
       "title": "Untitled",
       "year": 2024,
       "location": null,
@@ -212,18 +212,102 @@
       "order": 150
     },
     {
-      "id": "pumpkins",
-      "src": "images/Pumpkins.jpg",
-      "alt": "Rotting pumpkins",
+      "id": "charlie",
+      "src": "images/Charlie.jpg",
+      "alt": "Black dog sitting in grass, lit from the side against a dark background",
+      "title": null,
+      "year": null,
+      "location": null,
+      "medium": null,
+      "camera": null,
+      "filmStock": null,
+      "project": "animal-studies",
+      "featured": false,
+      "order": 160
+    },
+    {
+      "id": "gary",
+      "src": "images/Gary.jpg",
+      "alt": "Snake swimming through dark water beneath overhanging grass",
+      "title": null,
+      "year": null,
+      "location": null,
+      "medium": null,
+      "camera": null,
+      "filmStock": null,
+      "project": "animal-studies",
+      "featured": false,
+      "order": 170
+    },
+    {
+      "id": "heavy-camp",
+      "src": "images/HeavyCamp.jpg",
+      "alt": "Military truck attached to a white travel trailer in a gravel lot",
+      "title": null,
+      "year": null,
+      "location": null,
+      "medium": null,
+      "camera": null,
+      "filmStock": null,
+      "project": "roadside-machinery",
+      "featured": false,
+      "order": 180
+    },
+    {
+      "id": "peekaboo",
+      "src": "images/Peakaboo.jpg",
+      "alt": "Small doll face peering over rusted metal baskets in overgrown brush",
+      "title": null,
+      "year": null,
+      "location": null,
+      "medium": null,
+      "camera": null,
+      "filmStock": null,
+      "project": "found-objects",
+      "featured": false,
+      "order": 190
+    },
+    {
+      "id": "strawberry-festival",
+      "src": "images/Strawberry festival.jpg",
+      "alt": "Layered nighttime exposure of pedestrians and lights at a strawberry festival",
+      "title": null,
+      "year": null,
+      "location": null,
+      "medium": null,
+      "camera": null,
+      "filmStock": null,
+      "project": "night-work",
+      "featured": false,
+      "order": 200
+    },
+    {
+      "id": "dream-tree",
+      "src": "images/DreamTree.jpg",
+      "alt": "Two people standing beside a twisted tree at the edge of a lake",
       "title": "Untitled",
       "year": 2024,
       "location": null,
       "medium": null,
       "camera": null,
       "filmStock": null,
-      "project": "selected-work",
-      "featured": true,
-      "order": 160
+      "project": "archive",
+      "featured": false,
+      "order": 210
+    },
+    {
+      "id": "welcome-bear",
+      "src": "images/WelcomeBear.jpg",
+      "alt": "Weathered wooden bear holding a welcome sign beside a doorway",
+      "title": null,
+      "year": null,
+      "location": null,
+      "medium": null,
+      "camera": null,
+      "filmStock": null,
+      "project": "archive",
+      "featured": false,
+      "order": 220
     }
   ]
 }
