@@ -10,3 +10,8 @@ node_modules/**
 .assetsignore
 README.md
 wrangler.jsonc
+package*.json
+scripts
+scripts/**
+incoming
+incoming/**

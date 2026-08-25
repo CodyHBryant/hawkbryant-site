@@ -7,6 +7,10 @@
   const closeButton = document.getElementById('lightbox-close');
   const previousButton = document.getElementById('lightbox-prev');
   const nextButton = document.getElementById('lightbox-next');
+  const defaultImageSizes =
+    '(max-width: 480px) calc(100vw - 2.5rem), ' +
+    '(max-width: 768px) calc(50vw - 2rem), ' +
+    '(max-width: 1400px) calc(33vw - 1.5rem), 450px';
 
   if (!galleryGrid || !lightbox || !lightboxImage) return;
 
@@ -39,9 +43,19 @@
     figure.setAttribute('aria-label', `Open ${captionText || photo.alt || 'photograph'}`);
     setMetadata(figure, photo);
 
+    if (photo.srcset) {
+      image.srcset = photo.srcset;
+      image.sizes = photo.sizes || defaultImageSizes;
+    }
+
     image.src = photo.src;
     image.alt = photo.alt || '';
-    image.loading = index < 4 ? 'eager' : 'lazy';
+    if (photo.width && photo.height) {
+      image.width = photo.width;
+      image.height = photo.height;
+    }
+    image.loading = index === 0 ? 'eager' : 'lazy';
+    image.fetchPriority = index === 0 ? 'high' : 'auto';
     image.decoding = 'async';
 
     caption.textContent = captionText;
@@ -63,8 +77,23 @@
     currentIndex = (index + galleryItems.length) % galleryItems.length;
     const item = galleryItems[currentIndex];
 
-    lightboxImage.src = item.image.currentSrc || item.image.src;
+    if (item.photo.srcset) {
+      lightboxImage.srcset = item.photo.srcset;
+      lightboxImage.sizes = '90vw';
+    } else {
+      lightboxImage.removeAttribute('srcset');
+      lightboxImage.removeAttribute('sizes');
+    }
+
+    lightboxImage.src = item.photo.src;
     lightboxImage.alt = item.photo.alt || '';
+    if (item.photo.width && item.photo.height) {
+      lightboxImage.width = item.photo.width;
+      lightboxImage.height = item.photo.height;
+    } else {
+      lightboxImage.removeAttribute('width');
+      lightboxImage.removeAttribute('height');
+    }
   }
 
   function openLightbox(index, trigger) {

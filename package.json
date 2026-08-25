@@ -1,0 +1,13 @@
+{
+  "name": "hawkbryant-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "photos:add": "node scripts/add-photo.mjs",
+    "photos:process": "node scripts/process-incoming.mjs",
+    "photos:build": "node scripts/build-responsive-images.mjs",
+    "photos:build:all": "node scripts/build-responsive-images.mjs --all",
+    "photos:validate": "node scripts/validate-photos.mjs",
+    "test": "node scripts/validate-photos.mjs"
+  }
+}
