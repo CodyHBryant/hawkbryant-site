@@ -1,0 +1,61 @@
+name: Photo intake pipeline
+
+on:
+  push:
+    paths:
+      - "incoming/**"
+      - "scripts/**"
+      - "data/photos.json"
+      - ".github/workflows/photo-pipeline.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: photo-pipeline-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  process:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          package-manager-cache: false
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes imagemagick
+
+      - name: Process incoming photographs
+        run: node scripts/process-incoming.mjs
+
+      - name: Build responsive images
+        run: node scripts/build-responsive-images.mjs
+
+      - name: Validate photo catalog
+        run: node scripts/validate-photos.mjs
+
+      - name: Commit generated assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/photos.json images incoming
+
+          if git diff --cached --quiet; then
+            echo "Photo assets are already current."
+            exit 0
+          fi
+
+          git commit -m "Process photography assets"
+          git push
