@@ -368,6 +368,24 @@
       "project": "archive",
       "featured": false,
       "order": 220
+    },
+    {
+      "id": "000480020005",
+      "src": "images/000480020005.jpg",
+      "alt": "",
+      "title": null,
+      "year": null,
+      "location": null,
+      "medium": null,
+      "camera": null,
+      "filmStock": null,
+      "project": "intake",
+      "featured": false,
+      "order": 230,
+      "width": 1350,
+      "height": 1330,
+      "srcset": "images/optimized/000480020005-800.jpg 800w, images/optimized/000480020005-1350.jpg 1350w",
+      "sizes": "(max-width: 480px) calc(100vw - 2.5rem), (max-width: 768px) calc(50vw - 2rem), (max-width: 1400px) calc(33vw - 1.5rem), 450px"
     }
   ]
 }
