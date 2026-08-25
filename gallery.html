@@ -20,140 +20,26 @@
     </nav>
   </header>
 
-  <main class="gallery-main"> 
-    <div class="gallery-grid">
-
-  <figure class="gallery-item">
-    <img src="images/BridgeMoment.jpg" alt="Covered bridge with silhouette" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/Strawberry festival.jpg" alt="" loading="lazy" />
-    <figcaption></figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/DreamTree.jpg" alt="Two figures by the water" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/Charlie.jpg" alt="Sometimes we call him dog" loading="lazy" />
-    <figcaption></figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/churchSteeple.jpg" alt="Church steeple in fog" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/BrokenSwing.jpg" alt="Broken swing set" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/Phonebooth.jpg" alt="Abandoned phone booth" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/OlBug.jpg" alt="" loading="lazy" />
-    <figcaption></figcaption>
-  </figure>
-      
-  <figure class="gallery-item">
-    <img src="images/WannaWatch.jpg" alt="Television under carport" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/HeadlessStatue.jpg" alt="Headless garden statue" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/DollSpa.jpg" alt="Doll in water bin" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/Janet.jpg" alt="Special lady" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-      
-  <figure class="gallery-item">
-    <img src="images/TinNap.jpg" alt="Tin can robot" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/HorseshoeTree.jpg" alt="Horseshoe absorbed into tree" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/FutureWhen.jpg" alt="Future home of Florette Vol. Fire Dept." loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-  <figure class="gallery-item">
-    <img src="images/Pumpkins.jpg" alt="Rotting pumpkins" loading="lazy" />
-    <figcaption>Untitled, 2024</figcaption>
-  </figure>
-
-</div>
-
+  <main class="gallery-main">
+    <div class="gallery-grid" id="gallery-grid"></div>
+    <noscript>This gallery requires JavaScript to display photographs.</noscript>
   </main>
 
-  <!-- Lightbox -->
-
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightbox-close">✕</button>
-    <button class="lightbox-prev" id="lightbox-prev">‹</button>
-    <button class="lightbox-next" id="lightbox-next">›</button>
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image viewer"
+    aria-hidden="true"
+  >
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close image viewer">✕</button>
+    <button class="lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous photograph">‹</button>
+    <button class="lightbox-next" id="lightbox-next" type="button" aria-label="Next photograph">›</button>
     <img class="lightbox-img" id="lightbox-img" src="" alt="" />
   </div>
 
-  <script>
-    const items = Array.from(document.querySelectorAll('.gallery-item img'));
-    const lightbox = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightbox-img');
-    let current = 0;
-
-    function open(index) {
-      current = index;
-      lbImg.src = items[current].src;
-      lbImg.alt = items[current].alt;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function close() {
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    function prev() { open((current - 1 + items.length) % items.length); }
-    function next() { open((current + 1) % items.length); }
-
-    items.forEach((img, i) => {
-      img.parentElement.addEventListener('click', () => open(i));
-    });
-
-    document.getElementById('lightbox-close').addEventListener('click', close);
-    document.getElementById('lightbox-prev').addEventListener('click', prev);
-    document.getElementById('lightbox-next').addEventListener('click', next);
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
-    document.addEventListener('keydown', e => {
-      if (!lightbox.classList.contains('active')) return;
-      if (e.key === 'Escape') close();
-      if (e.key === 'ArrowLeft') prev();
-      if (e.key === 'ArrowRight') next();
-    });
-  </script>
-
+  <script src="gallery.js" defer></script>
 
   <footer class="site-footer">
     <span>© <script>document.write(new Date().getFullYear())</script> Hawk Bryant</span>
