@@ -66,4 +66,8 @@ Example record:
 
 ## Deployment
 
-The site is hosted on Cloudflare Pages and connected to this GitHub repository. Any push to `main` triggers an automatic deployment.
+The site is hosted with Cloudflare Workers Static Assets and connected to this GitHub repository. Any push to `main` triggers an automatic deployment.
+
+- `wrangler.jsonc` identifies the repository root as the static-assets directory.
+- `.assetsignore` prevents repository and configuration files from being published as website assets.
+- Cloudflare's default `auto-trailing-slash` HTML handling preserves clean URLs such as `/gallery` and `/about`.
