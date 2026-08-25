@@ -380,7 +380,7 @@
       "camera": "Rolleiflex 3.5B",
       "filmStock": "Ilford HP5",
       "project": "intake",
-      "featured": false,
+      "featured": true,
       "order": 230,
       "width": 1350,
       "height": 1330,
